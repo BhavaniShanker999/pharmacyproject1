@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'a_8$tn_1sv^eeo$prka3a$u!l5^4+5b7_^g#x)f5^o#fy7%z1l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'crm.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 #DATABASES = {
-  #  'default': {
-   #     'ENGINE': 'django.db.backends.sqlite3',
-   #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-  #  }
+   #'default': {
+   #    'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+ #  }
 #}
 
 DATABASES = {"default": dj_database_url.config(
