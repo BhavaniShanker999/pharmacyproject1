@@ -1,0 +1,16 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content%}
+<form method="POST" align='center'>
+    {% csrf_token %}
+    {{form_set.management_form}}
+    {{customer.name}}
+    <hr>
+    {% for form in form_set%}
+        {{form}}
+        <hr>
+    {% endfor %}
+    <input type="submit" name="Submit">
+</form>
+
+{% endblock %}

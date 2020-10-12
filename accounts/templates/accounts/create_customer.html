@@ -1,0 +1,12 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content%}
+<form method="POST" align='center'>
+    {% csrf_token %}
+    <hr>
+    <h5> Enter New Client Details</h5>
+    {{form.as_p}}
+    <input type="submit" name="Submit">
+</form>
+
+{% endblock %}

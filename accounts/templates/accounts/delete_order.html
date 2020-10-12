@@ -1,0 +1,21 @@
+{%  extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="col" align='center'>
+    <div class="col-3">
+        <div class="card text-center text-white  mb-3" id="orders-delivered">
+            <p align='center'>Do you want to delete {{ordered_item}} ? </p>
+            <form align='center' method="POST">
+                {% csrf_token %}
+                <a align='center' class='btn btn-sm btn-info' href="{% url 'home' %}">No</a>
+                <input align='center' class='btn btn-sm btn-danger' type="submit" name="Delete">
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
